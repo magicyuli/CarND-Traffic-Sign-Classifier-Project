@@ -15,15 +15,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[clz_dist_train]: ./writeup/clz_dist_train.jpg "Training Data Distribution"
-[before_gray]: ./writeup/before_gray.jpg "Before Grayscaling"
-[after_gray]: ./writeup/after_gray.jpg "After Grayscaling"
-[cfs_mat]: ./writeup/cfs_mat.jpg "Confusion Matrix"
-[new_1]: ./writeup/2.png "Traffic Sign 1"
-[new_2]: ./writeup/4.png "Traffic Sign 2"
-[new_3]: ./writeup/13.png "Traffic Sign 3"
-[new_4]: ./writeup/14.png "Traffic Sign 4"
-[new_5]: ./writeup/37.png "Traffic Sign 5"
+[clz_dist_train]: ./writeup/clz_dist_train.png "Training Data Distribution"
+[before_gray]: ./writeup/before_gray.png "Before Grayscaling"
+[after_gray]: ./writeup/after_gray.png "After Grayscaling"
+[cfs_mat]: ./writeup/cfs_mat.png "Confusion Matrix"
+[new_1]: ./writeup/new_1.png "Traffic Sign 1"
+[new_2]: ./writeup/new_2.png "Traffic Sign 2"
+[new_3]: ./writeup/new_3.png "Traffic Sign 3"
+[new_4]: ./writeup/new_4.png "Traffic Sign 4"
+[new_5]: ./writeup/new_5.png "Traffic Sign 5"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
