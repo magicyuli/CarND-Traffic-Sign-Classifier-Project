@@ -33,7 +33,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/magicyuli/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb) and [a sample run of my code](https://github.com/magicyuli/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html)
+You're reading it! and here is a link to my [project code](https://github.com/magicyuli/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb) and [a sample run of my code](https://github.com/magicyuli/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html) (might be too big to be viewed in git directly..)
 
 ### Data Set Summary & Exploration
 
@@ -112,7 +112,7 @@ I applied dropout with 0.5 keep probability to the fully connected layers.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-My final model results were:
+My final model results were (calculated at the `validate` method of the `Model` class):
 * training set accuracy of 0.998218
 * validation set accuracy of 0.957370
 * test set accuracy of 0.941093
@@ -141,7 +141,7 @@ Max pooling and dropout greatly helped reduce overfitting. Convolution layer wor
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are five German traffic signs that I found on the web (converted to 32x32):
 
 ![New Image 1][new_1] ![New Image 2][new_2] ![New Image 3][new_3] 
 ![New Image 4][new_4] ![New Image 5][new_5]
@@ -192,7 +192,7 @@ For other images, the model were absolutely sure about the answer and they were 
 From learning, the conv layers can learn lines, shapes, color contrast, as we can see from the activation visualizations of the conv layers at the bottom of [this](https://github.com/magicyuli/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html).
 
 #### 2. Possible improvements
-Introducing blur, random noise, and random distortion to the training samples might improve the performance further. We can see this might be true if we look at the validation set classification result of images from class 24 in the confusion matrix below (last row is precisions and last column is recalls). The recall for class 24 is pretty low.
+Introducing blur, random noise, and random distortion to the training samples might improve the performance further. We can see this might be true if we look at the validation set classification result of images from class 24 in the confusion matrix below (last column is precisions and last row is recalls). The recall for class 24 is pretty low.
 
 ![Validation Set confusion matrix][cfs_mat]
 
