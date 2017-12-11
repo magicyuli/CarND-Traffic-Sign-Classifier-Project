@@ -117,23 +117,25 @@ My final model results were (calculated at the `validate` method of the `Model` 
 * validation set accuracy of 0.957370
 * test set accuracy of 0.941093
 
-* What was the first architecture that was tried and why was it chosen?
+
+##### What was the first architecture that was tried and why was it chosen?
 The first architecture I used was of the same structure, but with more parameters, i.e. depths of the conv layes were 32, 64, and number of neurons in the fully connected layers were 1024, 1024. I chose it because I was training on the RGB images, and wanted more complex model to capture the features. Also the pooling layers were using patches of 2x2 instead of 3x3.
-* What were some problems with the initial architecture?
+
+##### What were some problems with the initial architecture?
 It overfit the training set more easily. And it trained slower.
 
 Actually at the very beginning I didn't even have pooling layers and dropout in my model, which easily achieves 0.99 plus accuracy on the training set, but with only 0.6 on the validation set. After adding regularization, I got 0.85 on the validation set.
 
-* How was the architecture adjusted and why was it adjusted?
-First I changed the patch size in the pooling layers to 3x3 after reading [this paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf). It claims this approach reduces chances of overfitting, and it improved my validation accuracy to 0.929925.
+##### How was the architecture adjusted and why was it adjusted?
+First I changed the patch size in the pooling layers to 3x3 after reading [this paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf), which led to `overlapping pooling`, i.e. the patch is 3x3 while the stride is 2x2. The paper claims this approach reduces the chances of overfitting, and it improved my validation accuracy to 0.929925.
 
 Then I tried training model with grayscale images because after looking at the images that were classified wrong, I found most of them were extremely dark while the images of the same class in the training set were normally lightened. I also looked at the visualizations of the conv layers, and it seemed that the second conv layer barely activated, so I reduced the depth of the second conv layer to 32. I also reduced the fully connected layers to 512 neurons each, which gave me the final validation accuracy of 0.957370.
 
 
-* Which parameters were tuned? How were they adjusted and why?
+##### Which parameters were tuned? How were they adjusted and why?
 The learning rate were dynamically reduced because when the model is closer to the optimum, large learning rate led to overshoot and bouncing. Batch size was reduced because large batch size led to serious overfitting.
 
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+##### What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 Max pooling and dropout greatly helped reduce overfitting. Convolution layer works well with images because of the statistical invariance existing in images. In other words, it can find the object of interest no mattern where it locates in the image.
  
 
